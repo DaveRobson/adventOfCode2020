@@ -1,5 +1,6 @@
 package uk.co.robson.adventofcode2020.day1;
 
+import com.google.common.base.Stopwatch;
 import org.apache.commons.io.IOUtils;
 
 import java.io.InputStream;
@@ -7,11 +8,13 @@ import java.nio.charset.StandardCharsets;
 
 public class Exercise2 {
     public static void main(String[] args) throws Exception {
+        Stopwatch stopwatch = Stopwatch.createStarted();
         String[] lines = loadInputData().split("\n");
         for(int i = 0; i < lines.length; i++) {
             int value = Integer.parseInt(lines[i]);
             System.out.println(calc(lines, i + 1, 2020 - value, value));
         }
+        System.out.println(stopwatch);
     }
 
     private static String loadInputData() throws Exception {
@@ -32,7 +35,7 @@ public class Exercise2 {
             }
         }
 
-        System.out.println("Oops didnt find anything");
+        //System.out.println("Oops didnt find anything");
         return 0;
     }
 }

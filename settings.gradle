@@ -1,4 +1,10 @@
 rootProject.name = 'adventOfCode2020'
 include 'modules:day1'
 findProject(':modules:day1')?.name = 'day1'
+include 'modules:day2'
+findProject(':modules:day2')?.name = 'day2'
+include 'modules:day2'
+findProject(':modules:day2')?.name = 'day2'
+include 'modules:day2'
+findProject(':modules:day2')?.name = 'day2'
 

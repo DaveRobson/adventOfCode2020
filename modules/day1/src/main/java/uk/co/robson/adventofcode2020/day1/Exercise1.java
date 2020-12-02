@@ -1,5 +1,6 @@
 package uk.co.robson.adventofcode2020.day1;
 
+import com.google.common.base.Stopwatch;
 import org.apache.commons.io.IOUtils;
 
 import java.io.InputStream;
@@ -8,10 +9,11 @@ import java.nio.charset.StandardCharsets;
 public class Exercise1 {
 
     public static void main(String[] args) throws Exception {
+        Stopwatch stopwatch = Stopwatch.createStarted();
         String[] lines = loadInputData().split("\n");
-        System.out.println(calc(lines));
 
-
+        calc(lines);
+        System.out.println(stopwatch);
     }
 
     private static String loadInputData() throws Exception {
