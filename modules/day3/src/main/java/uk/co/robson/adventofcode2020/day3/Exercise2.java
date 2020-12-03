@@ -1,14 +1,14 @@
 package uk.co.robson.adventofcode2020.day3;
 
+import com.google.common.base.Stopwatch;
 import uk.co.robson.adventofcode2020.day3.util.DataParser;
 import uk.co.robson.adventofcode2020.day3.util.Slide;
-
-import java.math.BigInteger;
-import java.util.List;
 
 public class Exercise2 {
 
     public static void main(String[] args) throws Exception {
+        Stopwatch stopwatch = Stopwatch.createStarted();
+
         DataParser parser = new DataParser();
         int[][] course = parser.parseFile("exercise1-input.txt");
         Slide slide = new Slide();
@@ -20,5 +20,6 @@ public class Exercise2 {
         sum *= slide.treesHit(course, 1, 2);
 
         System.out.println("Num of trees " + sum);
+        System.out.println("Time taken to execute: " + stopwatch);
     }
 }

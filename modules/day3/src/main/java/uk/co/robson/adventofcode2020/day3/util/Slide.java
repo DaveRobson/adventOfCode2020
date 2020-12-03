@@ -14,11 +14,11 @@ public class Slide {
 
         int numOfTrees = 0;
 
-        while(y < (course.length)) {
+        while(y < course.length) {
             int numOfColumns = course[y].length - 1;
 
             if(x > numOfColumns) {
-                x -= (numOfColumns + 1); //end of the col but the -1 is to reset x back to starting at 0
+                x -= (numOfColumns + 1); //end of the col but the +1 is to reset x back to starting at 0
             }
 
             int value = course[y][x];
@@ -27,10 +27,8 @@ public class Slide {
                 numOfTrees += 1;
             }
 
-
-
             x += rightMove;
-            y += downMove == 0 ? 1 : downMove;
+            y += downMove;
         }
 
         System.out.printf("output %s%n", numOfTrees);
