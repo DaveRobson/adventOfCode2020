@@ -7,4 +7,8 @@ include 'modules:day2'
 findProject(':modules:day2')?.name = 'day2'
 include 'modules:day2'
 findProject(':modules:day2')?.name = 'day2'
+include 'modules:day2-kotlin'
+findProject(':modules:day2-kotlin')?.name = 'day2-kotlin'
+include 'modules:day3'
+findProject(':modules:day3')?.name = 'day3'
 

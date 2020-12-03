@@ -13,5 +13,10 @@ dependencies {
     compile group: 'commons-io', name: 'commons-io', version: '2.4'
     compile 'com.google.guava:guava:28.0-jre'
 
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
 }
