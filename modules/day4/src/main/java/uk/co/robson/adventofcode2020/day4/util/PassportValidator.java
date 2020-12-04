@@ -11,7 +11,8 @@ import java.util.regex.Pattern;
 public class PassportValidator {
 
     public Boolean isValid(Passport passport) {
-        return validate(passport::getBirthYear, this::birthYear) &&
+        return  isNotEmpty(passport) &&
+                validate(passport::getBirthYear, this::birthYear) &&
                 validate(passport::getIssueYear, this::issueYear) &&
                 validate(passport::getExpYear, this::expYear) &&
                 validate(passport::getHeight, this::height) &&
@@ -20,8 +21,22 @@ public class PassportValidator {
                 validate(passport::getId, this::pid);
     }
 
+    public Boolean isNotEmpty(Passport passport) {
+        return !isValueEmpty(passport.getBirthYear()) &&
+                !isValueEmpty(passport.getIssueYear()) &&
+                !isValueEmpty(passport.getExpYear()) &&
+                !isValueEmpty(passport.getHeight()) &&
+                !isValueEmpty(passport.getEyeColour()) &&
+                !isValueEmpty(passport.getHairColour()) &&
+                !isValueEmpty(passport.getId());
+    }
+
     public Boolean validate(Supplier<String> getter, Function<String, Boolean> vFunc) {
         return vFunc.apply(getter.get());
+    }
+
+    public Boolean isValueEmpty(String value) {
+        return value == null || value.isEmpty();
     }
 
     public Boolean birthYear(String value) {
