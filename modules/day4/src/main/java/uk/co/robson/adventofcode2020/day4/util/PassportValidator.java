@@ -56,7 +56,7 @@ public class PassportValidator {
     }
 
     public Boolean hairColour(String value) {
-        return Pattern.matches("^#[a-z0-9]{6}$", value);
+        return Pattern.matches("^#[a-f0-9]{6}$", value);
     }
 
     public Boolean eyeColour(String value) {
