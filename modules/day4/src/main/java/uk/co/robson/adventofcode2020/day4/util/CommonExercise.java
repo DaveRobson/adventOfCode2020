@@ -1,6 +1,5 @@
 package uk.co.robson.adventofcode2020.day4.util;
 
-import com.google.common.base.Stopwatch;
 import uk.co.robson.adventofcode2020.day4.domain.Passport;
 
 import java.util.List;
