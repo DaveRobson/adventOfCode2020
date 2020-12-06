@@ -15,4 +15,6 @@ include 'modules:day4'
 findProject(':modules:day4')?.name = 'day4'
 include 'modules:day5'
 findProject(':modules:day5')?.name = 'day5'
+include 'modules:day6'
+findProject(':modules:day6')?.name = 'day6'
 
