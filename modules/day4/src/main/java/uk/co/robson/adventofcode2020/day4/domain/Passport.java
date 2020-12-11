@@ -1,6 +1,5 @@
 package uk.co.robson.adventofcode2020.day4.domain;
 
-import javax.validation.constraints.NotNull;
 
 public class Passport {
 
